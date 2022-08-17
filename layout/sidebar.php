@@ -1,7 +1,6 @@
 <?php
 
 include 'config/app.php';
-
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -9,14 +8,15 @@ if (!isset($_SESSION['username'])) {
 }
 
 ?>
-<html lang="en">
+<!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Boxicons  -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -38,6 +38,8 @@ if (!isset($_SESSION['username'])) {
             font-weight: 400;
         }
     </style>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/sidebars.css" rel="stylesheet">
     <title>Rental Mobile</title>
 </head>
 
@@ -53,7 +55,7 @@ if (!isset($_SESSION['username'])) {
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li>
-                    <a href="index.php" class="nav-link text-white">
+                    <a href="index.php" class="nav-link active">
                         <i class='bx bx-grid-alt'></i>
                         <span>Dashboard</span>
                     </a>
@@ -65,7 +67,7 @@ if (!isset($_SESSION['username'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="peminjamanpengembalian.php" class="nav-link active">
+                    <a href="peminjamanpengembalian.php" class="nav-link text-white">
                         <i class='bx bx-wallet'></i>
                         <span>Peminjaman/Pengembalian</span>
                     </a>
@@ -113,50 +115,3 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </div>
         </div>
-        </div>
-        <form action="" method="post">
-            <div class="card" style="position: relative; left: 25px; width: 1045px; padding: 8px 40px; height-max: 655px; border: 6px;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Special title treatment</h5>
-                    <table class="table" border="2">
-                        <thead>
-                            <tr>
-                                <th class="table-dark" scope="col">No</th>
-                                <th class="table-dark" scope="col">Nama</th>
-                                <th class="table-dark" scope="col">Jaminan</th>
-                                <th class="table-dark" scope="col">Notelp</th>
-                                <th class="table-dark" scope="col">Alamat</th>
-                                <th class="table-dark" scope="col">Sewa</th>
-                                <th class="table-dark" scope="col">lama Sewa</th>
-                                <th class="table-dark" scope="col">Bayar</th>
-                                <th class="table-dark" scope="col">Status Bayar</th>
-                                <th class="table-dark" scope="col">Sisa Pembayaran</th>
-                                <th class="table-dark" scope="col">Status Kendaraan</th>
-                                <th class="table-dark" scope="col">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </form>
-    </main>
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>

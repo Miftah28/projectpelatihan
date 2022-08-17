@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 ?>
-<html lang="en">
+<!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
@@ -64,14 +64,15 @@ if (!isset($_SESSION['username'])) {
                         <span>Kendaran</span>
                     </a>
                 </li>
+                </li>
                 <li>
-                    <a href="peminjamanpengembalian.php" class="nav-link active">
+                    <a href="peminjamanpengembalian.php" class="nav-link text-white">
                         <i class='bx bx-wallet'></i>
                         <span>Peminjaman/Pengembalian</span>
                     </a>
                 </li>
                 <li>
-                    <a href="transaksi.php" class="nav-link text-white">
+                    <a href="transaksi.php" class="nav-link active">
                         <i class='bx bx-wallet'></i>
                         <span>Transaksi</span>
                     </a>
@@ -114,48 +115,74 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
         </div>
-        <form action="" method="post">
-            <div class="card" style="position: relative; left: 25px; width: 1045px; padding: 8px 40px; height-max: 655px; border: 6px;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Special title treatment</h5>
-                    <table class="table" border="2">
-                        <thead>
+        <div class="card" style="position: relative; left: 25px; width: 1045px; padding: 8px 40px; height-max: 655px; border: 6px;">
+            <div class="card-body">
+                <h5 class="card-title text-center">DATA KENDARAN</h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Tambah Kendaraan
+                </button>
+                <table class="table" border="2">
+                    <thead>
+                        <tr>
+                            <th class="table-dark" scope="col">No</th>
+                            <th class="table-dark" scope="col">No Plat</th>
+                            <th class="table-dark" scope="col">Merek</th>
+                            <th class="table-dark" scope="col">Tahun</th>
+                            <th class="table-dark" scope="col">Harga</th>
+                            <th class="table-dark" scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>Otto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- Modal kendaran-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="database/tambahkendaraan.php" metod="post">
+                        <table border="0" cellspacing="0" cellpadding="1">
                             <tr>
-                                <th class="table-dark" scope="col">No</th>
-                                <th class="table-dark" scope="col">Nama</th>
-                                <th class="table-dark" scope="col">Jaminan</th>
-                                <th class="table-dark" scope="col">Notelp</th>
-                                <th class="table-dark" scope="col">Alamat</th>
-                                <th class="table-dark" scope="col">Sewa</th>
-                                <th class="table-dark" scope="col">lama Sewa</th>
-                                <th class="table-dark" scope="col">Bayar</th>
-                                <th class="table-dark" scope="col">Status Bayar</th>
-                                <th class="table-dark" scope="col">Sisa Pembayaran</th>
-                                <th class="table-dark" scope="col">Status Kendaraan</th>
-                                <th class="table-dark" scope="col">Aksi</th>
+                                <td><label>No Plat</label></td>
+                                <td><input type="text" name="noPlat"></td>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
+                                <td><label>Merek</label></td>
+                                <td><input type="text" name="merek"></td>
                             </tr>
-                        </tbody>
-                    </table>
+                            <tr>
+                                <td><label>Tahun</label></td>
+                                <td><input type="text" name="tahun"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Harga</label></td>
+                                <td><input type="text" name="harga"></td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Save">
+                    </form>
                 </div>
             </div>
-        </form>
-    </main>
+        </div>
+    </div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
 <?php
 
-include 'koneksi.php';
+include 'config/koneksi.php';
 
 error_reporting(0);
 
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="assets/css/signin.css" rel="stylesheet">
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -97,21 +97,21 @@ if (isset($_POST['submit'])) {
     </div>
     <main class="form-signin w-100 m-auto">
         <form method="post" action="">
-            <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-            <div class="form-floating">
-                <input type="email" class="form-control" value="<?php echo $email; ?>" id="email" name="email" placeholder="name@example.com" required>
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="password" value="<?php echo $_POST['password']; ?>" name="password" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-            </div>
-
+                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                <div class="form-floating">
+                    <input type="email" class="form-control" value="<?php echo $email; ?>" id="email" name="email" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <!-- / form-floating -->
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" value="<?php echo $_POST['password']; ?>" name="password" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <!-- / form-floating -->
             <input class="w-100 btn btn-lg btn-primary" type="submit" value="Sign in" name="submit"></input>
         </form>
     </main>
+    <!-- / form-sigin -->
 
 </body>
 
